@@ -1,0 +1,64 @@
+GET http://localhost:3000/api/v1/
+
+
+###
+
+
+POST http://localhost:3000/api/v1/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Rafaela Marchesini",
+  "email": "rafa.marchesini@hotmail.com",
+  "password": "fafa2310"
+}
+
+###
+
+POST http://localhost:3000/api/v1/users/login HTTP/1.1
+Content-Type: application/json
+
+# {
+#   "email": "rafa.marchesini@hotmail.com",
+#   "password": "fafa2310"
+# }
+{
+  "email": "pf95_@hotmail.com",
+  "password": "P3dr@1609"
+}
+
+###
+
+POST http://localhost:3000/api/v1/users/me HTTP/1.1
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImp0aSI6IjM5YWYzZjNmLTBlMWYtNDRlMi05ODNlLTJmMWE1M2YwYzIxMiIsImlhdCI6MTY5NjIxMjQxNCwiZXhwIjoxNjk2MjQxMjE0fQ.Zup9wvtiH7dLDcB-dUdFTO6lBYy3JmTpryCdWaX7WOU"
+}
+
+###
+
+GET http://localhost:3000/api/v1/users/profile HTTP/1.1
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5NjAyMDY3NCwiZXhwIjoxNjk2MDIwOTc0fQ.M2BbVnV4q-Mp5jGuhb8b6waJYD6LeBsqqA8WHI-VLiw
+
+
+###
+
+POST http://localhost:3000/api/v1/diet HTTP/1.1
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5NjIxNzY3MSwiZXhwIjoxNjk2MzA0MDcxfQ.AX7a3_gLmO5WWs68QDwbytbS4MfPkvK00dFWRBQsFzg
+
+{
+  "name": "testando",
+  "description": "test",
+  "date": "29/09/2023",
+  "hour": "19:35",
+  "isDiet": true
+}
+
+###
+
+GET http://localhost:3000/api/v1/diet HTTP/1.1
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5NjIxNzY3MSwiZXhwIjoxNjk2MzA0MDcxfQ.AX7a3_gLmO5WWs68QDwbytbS4MfPkvK00dFWRBQsFzg
